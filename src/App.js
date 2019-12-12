@@ -7,7 +7,7 @@ import "./App.css";
 import Logo from "./components/DisplayComponents/Logo";
 import Numbers from  "./components/ButtonComponents/NumberButtons/Numbers";
 import Display from './components/DisplayComponents/Display';
-import Operators from "./components/ButtonComponents/SpecialButtons/Specials";
+import Operators from "./components/ButtonComponents/OperatorButtons/Operators";
 import Specials from "./components/ButtonComponents/SpecialButtons/Specials";
 
 
@@ -26,7 +26,7 @@ function App() {
     if (operator=== '=') {
       setDisplayValue(displayValue => (displayValue));
     } else {
-      setDisplayValue(displayValue => displayValue+ ''+ operator + '');
+      setDisplayValue(displayValue => displayValue + ''+ operator + '');
     }
   };
 
@@ -35,10 +35,10 @@ function App() {
       <Logo />
       <div className="App">
         {/* STEP 4 - Render your components here and be sure to properly import/export all files */}
-        <Display number={displayValue} />
-        <Numbers addNumber={addNumber}b />
-        <Operators addOperator={addOperator} />
-        <Specials />
+        <Display number={displayValue}/>
+        <Numbers addNumber={addNumber}/>
+        <Operators addOperator={addOperator}/>
+        <Specials/>
 
       </div>
     </div>
@@ -46,3 +46,5 @@ function App() {
 }
 
 export default App;
+
+// MVP completed!
